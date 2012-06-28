@@ -1,0 +1,153 @@
+﻿@{
+	ViewBag.Title = "Главная страница";
+}
+<div class="wrapper">
+	<div id="slider">
+		<ul class="items">
+			<li>
+				<img src="@Url.Content("~/Content/photos/2nd_slide_final_m.jpg")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Начальная школа</span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Home/Courses#swon" class="title" style="color: #333; text-decoration: underline;">Узнать
+							больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="@Url.Content("~/Content/photos/2nd_slide_edited.png")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Средняя школа</span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Home/Courses#swon1" class="title" style="color: #333; text-decoration: underline;">Узнать
+							больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="@Url.Content("~/Content/photos/slide_3.jpg")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Старшие классы</span><span
+						class="color1"></span><span></span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Home/Courses#swon2" class="title" style="color: #333; text-decoration: underline;">Узнать
+							больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="@Url.Content("~/Content/photos/4th_slide_6_edited.png")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Образование</span><span
+						class="color1"></span><span></span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Home/Introduction" class="title" style="color: #333; text-decoration: underline;">
+							Узнать больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="@Url.Content("~/Content/photos/3rd_slide_2_edited.png")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Команда</span><span
+						class="color1"></span><span></span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Home/Team" class="title" style="color: #333; text-decoration: underline;">
+							Узнать больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="box1">
+	<div id="main-content">
+		<div class="rez">
+			<div class="content2">
+				<div class="text">
+					<p>
+						Академия робототехники — это образовательное и игровое пространство, в котором мы
+						развиваем интеллект детей и их стремление к знанию, а так же готовим детей ко взрослой жизни в
+						новой информационной эпохе.</p>
+					<span>У нас вы сможете:</span>
+					<ul>
+						<li>Обучаться современным технологиям робототехники, программирования, конструирования.</li>
+						<li>Пройти весь путь от проектирования собственного робота до его воплощения.</li>
+						<li>Участвовать во всероссийских и международных соревнованиях среди роботов.</li>
+						<li>Участвовать в реальных проектах по созданию робототехнических и интеллектуальных
+							систем.</li>
+					</ul>
+					<a href="http://gorodperm.ru/info/society/guest/postfactum/?id=168" target="_blank">
+						Подробнее о принципах работы Академии Робототехники</a>
+				</div>
+			</div>
+		</div>
+		<div class="well-wrapper">
+			<div class="well">
+				<h2 class="title">
+					<a href="@Url.Action("Courses")#swon">Начальная школа</a></h2>
+				<div class="clr">
+				</div>
+				<div class="content">
+					<img src="@Url.Content("~/Content/images/1st_slide.png")" onclick="location.href = @Url.Action("Courses")#swon" />
+					<div class="text">
+						<p>
+							<strong>Для детей до 10 лет</strong></p>
+						<div class="index">
+							<a href="@Url.Action("Courses")#swon">Узнать больше</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="well">
+				<h2 class="title">
+					<a href="@Url.Action("Courses")#swon1">Средняя школа</a></h2>
+				<div class="clr">
+				</div>
+				<div class="content">
+					<img src="@Url.Content("~/Content/images/2nd_slide.png")" />
+					<div class="text">
+						<p>
+							<strong>Для детей до 15 лет</strong></p>
+						<a href="@Url.Action("Courses")#swon1">Узнать больше</a>
+					</div>
+				</div>
+			</div>
+			<div class="well">
+				<h2 class="title">
+					<a href="@Url.Action("Courses")#swon2">Старшие классы</a></h2>
+				<div class="clr">
+				</div>
+				<div class="content">
+					<img src="@Url.Content("~/Content/images/3rd_slide.png")" />
+					<div class="text">
+						<p>
+							<strong>Для детей старше 15 лет</strong></p>
+						<a href="@Url.Action("Courses")#swon2">Узнать больше</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('.content img').click(function () {
+				location.href = $(this).parent().find('a').attr('href');
+			});
+			$('.banner').click(function () {
+				location.href = $(this).find('a').attr('href');
+			});
+		</script>
+		@*<div class="book">
+			<h2 class="title">
+				<a href="#">Учебное пособие</a></h2>
+			<div class="clr">
+			</div>
+			<div class="img">
+				<img src="@Url.Content("~/Content/images/book.png")" alt />
+				<a href="#" title="Скачать " id="down-wrap"><span class="btn-title">СКАЧАТЬ</span> <span
+					class="btn-info"><span>Формат<br>
+						PDF</span> </span></a>
+			</div>
+		</div>*@
+	</div>
+</div>
+<div class="clear">
+</div>

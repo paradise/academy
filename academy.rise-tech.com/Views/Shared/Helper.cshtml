@@ -1,0 +1,4 @@
+﻿@helper Image(string img, int width = 0, int height = 0)
+{
+	<img src="@Url.Content("~/Content/" + img)" style="width:@width; height:@height" />
+}

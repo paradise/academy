@@ -1,0 +1,78 @@
+﻿@using academy.rise_tech.com.Code
+@{
+	ViewBag.Title = "События";
+}
+<div id="box1">
+	<div id="main-content">
+		<div style="width: 600px; float: left">
+			<h1>
+				Робофест 2012 в Москве</h1>
+			<p>
+				На IV Всероссийском робототехническом фестивале - "РобоФест-2012" наша команда заняла
+				2 место в категории FIRST LEGO League (FLL), обогнав крупные школы робототехники
+				из Москвы, Челябинска, Екатеренбурга и других городов.</p>
+			<div class="photo" style="width: 560px">
+				@Html.Image("photos/Photo2/mini/y_33a1199c.jpg", "photos/Photo2/big/y_33a1199c.jpg", 0, 150)
+				@Html.Image("photos/Photo2/mini/y_ad8cdb1f.jpg", "photos/Photo2/big/y_ad8cdb1f.jpg", 0, 150)
+				@Html.Image("images/event/robofest_1_s.jpg", "images/event/robofest_1_s.jpg", 0, 150)
+				@Html.Image("photos/Photo2/big/y_fe80491f.jpg", "photos/Photo2/big/y_fe80491f.jpg", 540, 0)
+				@Html.Image("photos/Photo2/mini/Фестиваль 354.jpg", "photos/Photo2/big/Фестиваль 354.jpg", 0, 150)
+				@Html.Image("photos/Photo2/mini/Фестиваль 398.jpg", "photos/Photo2/big/Фестиваль 398.jpg", 0, 150)
+				@Html.Image("images/event/robofest_2_s.jpg", "images/event/robofest_2_s.jpg", 0, 150)
+			</div>
+		</div>
+		<div style="float: right; margin-top:40px;">
+			<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
+			<!-- VK Widget -->
+			<div id="vk_groups_news">
+			</div>
+			<script type="text/javascript">
+				VK.Widgets.Group("vk_groups_news", { mode: 2, width: "280", height: "1000" }, 27347362);
+			</script>
+		</div>
+		<div class="clear">
+		</div>
+		<br /><br />
+		<hr />
+		<h1>
+			Робофест 2012 в Перми</h1>
+		<p>
+			На первом региональном Робототехническом Фестивале "Робофест" наша команда заняла
+			5 первых мест (из шести ) возможных!!!</p>
+		<div class="photo" style="width: 860px">
+			@Html.Image("photos/Photo/mini/_DSC0616.jpg", "photos/Photo/big/_DSC0616.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0625.jpg", "photos/Photo/big/_DSC0625.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0634.jpg", "photos/Photo/big/_DSC0634.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0638.jpg", "photos/Photo/big/_DSC0638.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0640.jpg", "photos/Photo/big/_DSC0640.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0717.jpg", "photos/Photo/big/_DSC0717.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0647.jpg", "photos/Photo/big/_DSC0647.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0687.jpg", "photos/Photo/big/_DSC0687.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/z_f2fa9b8d.jpg", "photos/Photo/big/z_f2fa9b8d.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0690.jpg", "photos/Photo/big/_DSC0690.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0705.jpg", "photos/Photo/big/_DSC0705.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0727.jpg", "photos/Photo/big/_DSC0727.jpg", 0, 130)
+			@Html.Image("photos/Photo/mini/_DSC0718.jpg", "photos/Photo/big/_DSC0718.jpg", 0, 130)
+		</div>
+		<br /><br />
+		<hr />
+		<h1>
+			Начало</h1>
+		<p>
+			С мая 2011 года начались занятия по курсу «Основы робототехники».</p>
+		<div class="photo" style="width: 735px">
+			@Html.Image("photos/Photo3/mini/w_04ed831b.jpg", "photos/Photo3/big/w_04ed831b.jpg", 0, 150)
+			@Html.Image("photos/Photo3/mini/w_32636991.jpg", "photos/Photo3/big/w_32636991.jpg", 0, 150)
+			@Html.Image("photos/Photo3/mini/w_4194cf69.jpg", "photos/Photo3/big/w_4194cf69.jpg", 0, 150)
+			@Html.Image("photos/Photo3/big/w_55e9052e.jpg", "photos/Photo3/big/w_55e9052e.jpg", 717, 0)
+			@Html.Image("photos/Photo3/mini/w_5c8eb192.jpg", "photos/Photo3/big/w_5c8eb192.jpg", 0, 150)
+			@Html.Image("photos/Photo3/mini/w_7e2c1145.jpg", "photos/Photo3/big/w_7e2c1145.jpg", 0, 150)
+			@Html.Image("photos/Photo3/mini/w_dec313f7.jpg", "photos/Photo3/big/w_dec313f7.jpg", 0, 150)
+		</div>
+	</div>
+</div>
+<script>
+	$('.photo').each(function () {
+		$(this).galery();
+	});
+</script>

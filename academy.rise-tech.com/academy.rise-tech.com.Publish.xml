@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="https://megatable.ru:8172/MsDeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="academy.rise-tech.com" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="administrator@megatable.local" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGKSXADx2Z0+Q0KkEjDP3ZAAAAAACAAAAAAADZgAAwAAAABAAAADpgDRLRqvm5w639HjLLbr+AAAAAASAAACgAAAAEAAAAEIUYoJRvk9xWqGlNPXgWdEYAAAAUvJMIJd8tmtIXcBJgj8ZmZLHYZHPpqtCFAAAABjjCeylRXu4eLvdhK/6NGf+Y3HC" SelectedForPublish="True" />
+</publishData>
