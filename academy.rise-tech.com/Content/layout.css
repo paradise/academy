@@ -135,7 +135,7 @@
     background: #990000;
 }
 
-@-webkit-keyframes nav-1 {50% {background:#0074FF}}
+/*@-webkit-keyframes nav-1 {50% {background:#0074FF}}
 @-moz-keyframes nav-1 {50% {background:#0074FF}}
 .home .main-nav .main {-webkit-animation:nav-1 1.5s 1s ease 1;-moz-animation:nav-1 1.5s 1s ease 1}
 @-webkit-keyframes nav-2 {50% {background:#01B0EC}}
@@ -152,4 +152,4 @@
 .home .main-nav .rules {-webkit-animation:nav-5 1.5s 1.4s ease 1;-moz-animation:nav-5 1.5s 1.4s ease 1}
 @-webkit-keyframes nav-6 {50% {background:#CC0000}}
 @-moz-keyframes nav-6 {50% {background:#CC0000}}
-.home .main-nav .rules {-webkit-animation:nav-6 1.5s 1.5s ease 1;-moz-animation:nav-6 1.5s 1.5s ease 1}
+.home .main-nav .rules {-webkit-animation:nav-6 1.5s 1.5s ease 1;-moz-animation:nav-6 1.5s 1.5s ease 1}*/
