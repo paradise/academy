@@ -24,12 +24,7 @@ namespace academy.rise_tech.com.Controllers
 			return View();
 		}
 
-		public ActionResult Events()
-		{
-			return View();
-		}
-
-		public ActionResult Team()
+		public ActionResult Partners()
 		{
 			return View();
 		}
@@ -38,6 +33,7 @@ namespace academy.rise_tech.com.Controllers
 		{
 			return File("/pdf/" + id + ".pdf", "application/pdf");
 		}
+
 
 	}
 }

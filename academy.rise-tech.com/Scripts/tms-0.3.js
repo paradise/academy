@@ -254,6 +254,7 @@
 							.appendTo(li)
 							.bind(_.changeEv,function(){
 								_.changeFu(i)
+								_.pauseSlShFu();
 								return false
 							})
 					_.pags.append(li)
