@@ -1,0 +1,28 @@
+﻿@{
+	ViewBag.Title = "Отзывы";
+}
+<div id="box1">
+	<div id="main-content">
+		<div style="width: 700px; float: left; overflow: hidden">
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">
+				Отзывы</h2>
+				<img alt="" src="@Url.Content("~/Content/photos/review.jpg")" style="vertical-align:top; margin:9px; border:1px solid #aaa;" />
+				<div style="width: 500px; display:inline-block; margin-left:20px">
+					<h3 style="margin-top:0px; margin:0px;">
+						Костарев Алексей</h3>
+					<p>
+						Спасибо за то что делаете, за этот кружок. Когда мой сын стал ходить к вам, то у
+						него впервые появились интересы....</p>
+					<p>
+						Для него это большой стимул для учебы в школе и на курсах информатики в университете.</p>
+					<p>
+						Будь ребята чуть постарше, то можно было бы делать реальные проекты по робототехнике.
+						Благо много где можно это применить.
+					</p>
+				</div>
+		</div>
+		@Html.Partial("AboutMenu")
+		<div class="clear">
+		</div>
+	</div>
+</div>
