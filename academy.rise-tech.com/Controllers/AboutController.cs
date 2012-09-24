@@ -33,7 +33,8 @@ namespace academy.rise_tech.com.Controllers
 
 		public ActionResult Review()
 		{
-			return View();
+			return RedirectToAction("Index", "Home");
+			//return View();
 		}
 	}
 }
