@@ -2,7 +2,7 @@
 	ViewBag.Title = "Главная страница";
 }
 <div class="wrapper">
-@*	<div id="myCarousel" class="carousel slide" style="width: 700px; margin: auto; padding-top: 25px;">
+	@*	<div id="myCarousel" class="carousel slide" style="width: 700px; margin: auto; padding-top: 25px;">
 		<div class="carousel-inner">
 			<div class="active item">
 				<img src="@Url.Content("~/Content/photos/2nd_slide_final_m.jpg")" alt="">
@@ -65,8 +65,7 @@
 				<div class="banner">
 					<span class="button1"><span class="color2" style="color: #45c0ff;">Начальная школа</span></span>
 					<p style="text-align: right; padding-right: 3px;">
-						<a href="/Courses/Elementary" class="title" style="color: #333; text-decoration: underline;">
-							Узнать больше &rarr;</a>
+						<a href="/Courses/Elementary" class="title" style="color: #333; text-decoration: underline;">Узнать больше &rarr;</a>
 					</p>
 				</div>
 			</li>
@@ -75,30 +74,27 @@
 				<div class="banner">
 					<span class="button1"><span class="color2" style="color: #45c0ff;">Средняя школа</span></span>
 					<p style="text-align: right; padding-right: 3px;">
-						<a href="/Courses/Secondary" class="title" style="color: #333; text-decoration: underline;">
-							Узнать больше &rarr;</a>
-					</p>
-				</div>
-			</li>
-			<li>
-				<img src="@Url.Content("~/Content/photos/slide_3.jpg")" alt="">
-				<div class="banner">
-					<span class="button1"><span class="color2" style="color: #45c0ff;">Старшие классы</span><span
-						class="color1"></span><span></span></span>
-					<p style="text-align: right; padding-right: 3px;">
-						<a href="/Courses/High" class="title" style="color: #333; text-decoration: underline;">
-							Узнать больше &rarr;</a>
+						<a href="/Courses/Secondary" class="title" style="color: #333; text-decoration: underline;">Узнать больше &rarr;</a>
 					</p>
 				</div>
 			</li>
 			<li>
 				<img src="@Url.Content("~/Content/photos/4th_slide_6_edited.png")" alt="">
 				<div class="banner">
-					<span class="button1"><span class="color2" style="color: #45c0ff;">Образование</span><span
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Старшие классы</span><span
 						class="color1"></span><span></span></span>
 					<p style="text-align: right; padding-right: 3px;">
-						<a href="/Home/Introduction" class="title" style="color: #333; text-decoration: underline;">
-							Узнать больше &rarr;</a>
+						<a href="/Courses/High" class="title" style="color: #333; text-decoration: underline;">Узнать больше &rarr;</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="@Url.Content("~/Content/photos/slide_3.jpg")" alt="">
+				<div class="banner">
+					<span class="button1"><span class="color2" style="color: #45c0ff;">Разработка роботов</span><span
+						class="color1"></span><span></span></span>
+					<p style="text-align: right; padding-right: 3px;">
+						<a href="/Development" class="title" style="color: #333; text-decoration: underline;">Узнать больше &rarr;</a>
 					</p>
 				</div>
 			</li>
@@ -108,8 +104,7 @@
 					<span class="button1"><span class="color2" style="color: #45c0ff;">Команда</span><span
 						class="color1"></span><span></span></span>
 					<p style="text-align: right; padding-right: 3px;">
-						<a href="/About/Team" class="title" style="color: #333; text-decoration: underline;">
-							Узнать больше &rarr;</a>
+						<a href="/About/Team" class="title" style="color: #333; text-decoration: underline;">Узнать больше &rarr;</a>
 					</p>
 				</div>
 			</li>
@@ -124,7 +119,8 @@
 					<p>
 						Академия робототехники — это образовательное и игровое пространство, в котором мы
 						развиваем интеллект детей и их стремление к знанию, а так же готовим детей ко взрослой
-						жизни в новой информационной эпохе.</p>
+						жизни в новой информационной эпохе. <a href="@Url.Action("Team", "About")">Подробнее</a>
+					</p>
 					<span>У нас вы сможете:</span>
 					<ul>
 						<li>Обучаться современным технологиям робототехники, программирования, конструирования.</li>
@@ -133,8 +129,8 @@
 						<li>Участвовать в реальных проектах по созданию робототехнических и интеллектуальных
 							систем.</li>
 					</ul>
-					<a href="http://gorodperm.ru/info/society/guest/postfactum/?id=168" target="_blank">
-						Подробнее о принципах работы Академии Робототехники</a>
+					@*<a href="http://gorodperm.ru/info/society/guest/postfactum/?id=168" target="_blank">
+						Подробнее о принципах работы Академии Робототехники</a>*@
 				</div>
 			</div>
 		</div>
@@ -148,9 +144,11 @@
 					<img src="@Url.Content("~/Content/images/1st_slide.png")" onclick="location.href = @Url.Action("Courses")#swon" />
 					<div class="text">
 						<p>
-							<strong>Для детей до 10 лет</strong></p>
+							<strong>Для детей до 10 лет</strong>
+						</p>
 						<div class="index">
-							<a href="@Url.Action("Elementary", "Courses")">Узнать больше</a></div>
+							<a href="@Url.Action("Elementary", "Courses")">Узнать больше</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -163,7 +161,8 @@
 					<img src="@Url.Content("~/Content/images/2nd_slide.png")" />
 					<div class="text">
 						<p>
-							<strong>Для детей до 15 лет</strong></p>
+							<strong>Для детей до 15 лет</strong>
+						</p>
 						<a href="@Url.Action("Secondary", "Courses")">Узнать больше</a>
 					</div>
 				</div>
@@ -177,7 +176,8 @@
 					<img src="@Url.Content("~/Content/images/3rd_slide.png")" />
 					<div class="text">
 						<p>
-							<strong>Для детей старше 15 лет</strong></p>
+							<strong>Для детей старше 15 лет</strong>
+						</p>
 						<a href="@Url.Action("High", "Courses")">Узнать больше</a>
 					</div>
 				</div>

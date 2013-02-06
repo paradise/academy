@@ -76,6 +76,7 @@
     <Compile Include="Code\HtmlHelpers.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DevelopmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartnersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -126,6 +127,7 @@
     <Content Include="Content\images\robots.png" />
     <Content Include="Content\images\sw_page_bg.png" />
     <Content Include="Content\images\team\ekaterina_khristolubova.jpg" />
+    <Content Include="Content\images\team\vlad_nikitin.jpg" />
     <Content Include="Content\images\team\mikhail_merzlyakov.jpg" />
     <Content Include="Content\images\team\sergey_khristolubov.jpg" />
     <Content Include="Content\images\telefon.gif" />
@@ -136,9 +138,35 @@
     <Content Include="Content\photos\2nd_slide_edited.png" />
     <Content Include="Content\photos\2nd_slide_final_m.jpg" />
     <Content Include="Content\photos\3rd_slide_2_edited.png" />
+    <Content Include="Content\photos\Photo-museum\big\museum10.jpg" />
+    <Content Include="Content\photos\Photo-museum\big\museum11.jpg" />
+    <Content Include="Content\photos\Photo-museum\big\museum4.jpg" />
+    <Content Include="Content\photos\Photo-museum\big\museum5.jpg" />
+    <Content Include="Content\photos\Photo-museum\big\museum7.jpg" />
+    <Content Include="Content\photos\Photo-museum\big\museum9.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum10min.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum11min.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum4min.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum5min.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum7min.jpg" />
+    <Content Include="Content\photos\Photo-museum\mini\museum9min.jpg" />
+    <Content Include="Content\photos\photo-robofest\big\1.jpg" />
+    <Content Include="Content\photos\photo-robofest\big\2.jpg" />
+    <Content Include="Content\photos\photo-robofest\big\3.jpg" />
+    <Content Include="Content\photos\photo-robofest\mini\2.jpg" />
+    <Content Include="Content\photos\photo-robofest\mini\3.jpg" />
+    <Content Include="Content\photos\photo-str\big\1.jpg" />
+    <Content Include="Content\photos\photo-str\big\2.jpg" />
+    <Content Include="Content\photos\photo-str\big\3.JPG" />
+    <Content Include="Content\photos\photo-str\big\4.jpg" />
+    <Content Include="Content\photos\photo-str\mini\1min.jpg" />
+    <Content Include="Content\photos\photo-str\mini\2min.jpg" />
+    <Content Include="Content\photos\photo-str\mini\3min.jpg" />
+    <Content Include="Content\photos\photo-str\mini\4min.jpg" />
     <Content Include="Content\photos\Photo4\mini\first.jpg" />
     <Content Include="Content\photos\Photo4\mini\second.jpg" />
     <Content Include="Content\photos\Photo4\mini\third.jpg" />
+    <Content Include="Content\photos\Photo5\first.jpg" />
     <Content Include="Content\photos\review.jpg" />
     <Content Include="Content\photos\4th_slide_6_edited.png" />
     <Content Include="Content\photos\Photo2\big\BZ5ydmqXbK0.jpg" />
@@ -266,6 +294,7 @@
     <Content Include="Content\photos\Photo\mini\_DSC0730.jpg" />
     <Content Include="Content\photos\review_s.png" />
     <Content Include="Content\photos\slide_3.jpg" />
+    <Content Include="Content\photos\team.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -377,7 +406,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Courses.cshtml" />
-    <Content Include="Views\Home\Introduction.cshtml" />
+    <Content Include="Views\Courses\Introduction.cshtml" />
     <Content Include="Views\Home\Partners.cshtml" />
     <Content Include="Views\Shared\Helper.cshtml" />
   </ItemGroup>
@@ -390,7 +419,10 @@
     <Content Include="pdf\tournaments.pdf" />
     <Content Include="pdf\training.pdf" />
     <Content Include="pdf\filial.pdf" />
+    <Content Include="pdf\plan1.pdf" />
+    <None Include="Properties\PublishProfiles\academy-robotics - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\academy-robotics - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\academy-robotics - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\academy-robotics - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Profile.pubxml" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
@@ -407,6 +439,7 @@
     <Content Include="Views\Partners\Filial.cshtml" />
     <Content Include="Views\Partners\Training.cshtml" />
     <Content Include="Views\Shared\PartnersMenu.cshtml" />
+    <Content Include="Views\Development\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

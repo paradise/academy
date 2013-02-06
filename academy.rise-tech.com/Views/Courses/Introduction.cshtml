@@ -3,18 +3,18 @@
 }
 <div id="box1">
 	<div id="main-content">
-		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">
-			Введение в робототехнику</h1>
+		<div style="float: right">
+			@Html.Partial("CoursesMenu")
+		</div>
+		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">О робототехнике</h1>
 		<div class="intro-wrapper">
 			<div class="intro-main">
-				<div class="intro-caption">
+				<div class="intro-caption" data-file="tournaments">
 					- Что такое робототехника
 				</div>
 				<div class="intro-icon">
 					<img class="download-icon" src="@Url.Content("~/Content/images/pdf-icon.png")" data-file="intro" />
 				</div>
-			</div>
-			<div class="clear">
 			</div>
 			<div class="intro-text" style="margin-top: 10px">
 				<object style="height: 450px; width: 900px;">
@@ -29,7 +29,7 @@
 		</div>
 		<div class="intro-wrapper">
 			<div class="intro-main">
-				<div class="intro-caption">
+				<div class="intro-caption" data-file="tournaments">
 					- Виды робототехнических наборов для обучения
 				</div>
 				<div class="intro-icon">
@@ -51,7 +51,7 @@
 		</div>
 		<div class="intro-wrapper">
 			<div class="intro-main">
-				<div class="intro-caption">
+				<div class="intro-caption" data-file="tournaments">
 					- Тематический план первого года обучения
 				</div>
 				<div class="intro-icon">
@@ -73,7 +73,7 @@
 		</div>
 		<div class="intro-wrapper">
 			<div class="intro-main">
-				<div class="intro-caption">
+				<div class="intro-caption" data-file="tournaments">
 					- Виды программного обеспечения для обучения
 				</div>
 				<div class="intro-icon">
@@ -95,7 +95,7 @@
 		</div>
 		<div class="intro-wrapper">
 			<div class="intro-main">
-				<div class="intro-caption">
+				<div class="intro-caption" data-file="tournaments">
 					- Виды турниров
 				</div>
 				<div class="intro-icon">
@@ -125,8 +125,3 @@
 		</div>*@
 	</div>
 </div>
-<script>
-	$(function () {
-
-	});
-</script>

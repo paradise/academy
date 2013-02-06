@@ -1,0 +1,24 @@
+﻿@{
+	ViewBag.Title = "Разработка роботов";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="box1">
+	<div id="main-content">
+		<h1 style="font-size: 32px;">Разработка роботов</h1>
+		<p>
+			Мы реализуем проекты по разработке роботов на заказ и системной интеграции в области регулируемого электропривода,
+			 включая в себя весь спектр услуг - от обследования объекта, разработки проекта, до ввода в эксплуатацию.
+		</p>
+		<br />
+		<div class="center-align">
+			<iframe width="600" height="350" src="http://www.youtube.com/embed/i5e5WuNMcBA" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<br />
+		<div class="center-align">
+			<p>Наша команда состоит из профессиональных программистов и инженеров</p>
+			<a href="@Url.Action("Team", "About")">
+				<img style="border: solid 1px #888;" width="600" src="@Url.Content("content/photos/team.jpg")" />
+			</a>
+		</div>
+	</div>
+</div>

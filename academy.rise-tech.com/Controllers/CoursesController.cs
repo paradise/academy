@@ -22,5 +22,10 @@ namespace academy.rise_tech.com.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult Introduction()
+		{
+			return View();
+		}
 	}
 }

@@ -4,20 +4,90 @@
 }
 <div id="box1">
 	<div id="main-content">
+		@Html.Partial("AboutMenu")
+		<div style="width: 700px; overflow: hidden">
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Посещения музея науки и техники г. Перми</h1>
+			<p>
+				Ученики Академии Робототехники побывали в музее науки и техники, там они провели ряд физических экспериментов. 
+				Особенно детям понравилось создавать молнии.
+			</p>
+			<br />
+		</div>
+		<br />
+		<div class="photo" style="width: 656px; margin: auto;">
+			@Html.Image("photos/Photo-museum/mini/museum10min.jpg", "photos/Photo-museum/big/museum10.jpg", 0, 150)
+			@Html.Image("photos/Photo-museum/mini/museum11min.jpg", "photos/Photo-museum/big/museum11.jpg", 0, 150)
+			@Html.Image("photos/Photo-museum/mini/museum4min.jpg", "photos/Photo-museum/big/museum4.jpg", 0, 150)
+			@Html.Image("photos/Photo-museum/mini/museum5min.jpg", "photos/Photo-museum/big/museum5.jpg", 0, 150)
+			@Html.Image("photos/Photo-museum/mini/museum7min.jpg", "photos/Photo-museum/big/museum7.jpg", 0, 150)
+			@Html.Image("photos/Photo-museum/mini/museum9min.jpg", "photos/Photo-museum/big/museum9.jpg", 0, 150)
+		</div>
+		<hr />
+		<div style="width: 700px; overflow: hidden">
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Участие ШТР Полазны в Робофесте в Перми</h1>
+			<p>
+				Школа технического резерва это уникальное учреждение, в котором дети углубленно изучают не только робототехнику, 
+				но и электротехнику и радиоэлектронику, получаю опыт работы с производственными станками. 
+				Благодаря широкой технической подготовке ученики школы уверенно заняли все призовые места в секции Виртуозная пайка.
+				Поздравляем победителей!! Первое место у Саши!!
+			</p>
+			<br />
+		</div>
+		<div class="photo" style="margin: auto; width: 596px;">
+			@Html.Image("photos/photo-str/mini/4min.jpg", "photos/photo-str/big/4.jpg", 580, 0)
+			@Html.Image("photos/photo-str/mini/2min.jpg", "photos/photo-str/big/2.jpg", 280, 0)
+			@Html.Image("photos/photo-str/mini/3min.jpg", "photos/photo-str/big/3.jpg", 280, 0)
+		</div>
+		<hr />
+		<div style="width: 700px; overflow: hidden">
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Участие в осеннем Робофесте в Перми</h1>
+			<p>
+				В октябре 2012 года ученики Академии Робототехники победили на сорернованиях Робофест в г. Перми. 
+				Поздравляем наших учеников, их родителей и педагогов! Подробнее о номинациях: 
+			</p>
+			<p><a target="_blank" href="http://vk.com/robots_perm?w=wall-27347362_238">Движение по линии</a></p>
+			<p><a target="_blank" href="http://vk.com/robots_perm?w=wall-27347362_242">FIRST LEGO League</a></p>
+			<p><a target="_blank" href="http://vk.com/robots_perm?w=wall-27347362_244">Kodu Game Lab</a></p>
+			<p><a target="_blank" href="http://vk.com/robots_perm?w=wall-27347362_250">Lego Digital Designer</a></p>
+			<br />
+		</div>
+		<div class="photo" style="width: 456px; margin: auto;">
+			@Html.Image("photos/photo-robofest/big/3.jpg", "photos/photo-robofest/mini/3.jpg", 440, 0)
+			@Html.Image("photos/photo-robofest/big/1.jpg", "photos/photo-robofest/big/1.jpg", 0, 201)
+			@Html.Image("photos/photo-robofest/big/2.jpg", "photos/photo-robofest/mini/2.jpg", 269, 0)
+		</div>
+		<hr />
+		<div style="width: 700px; overflow: hidden">
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Открытие Академии Робототехники в Полазне</h1>
+			<p>
+				В сентябре 2012 года в Школе Технического Резерва в Полазне открылся кружок Академия Робототехники. 
+				Мы очень рады, что руководство школы в лице Гонтарь Эльвиры Гансовны и Каменевой Ларисы Васильевны 
+				понимает важность развития детей в области информационных технологий и делает все возможное, чтобы 
+				детям было интересно заниматься в кружках школы. Кроме робототехники и программирования в школе 
+				технического резерва успешно реализуются образовательные программы по радиоэлектронике, металло- и 
+				деревообработке, выжиганию, ландшафтному дизайну и автомобильной технике.
+			</p>
+			<br />
+		</div>
+		<div class="photo" style="width: 520px; margin: auto;">
+			@Html.Image("photos/Photo5/first.jpg", "photos/Photo5/first.jpg", 500, 0)
+		</div>
+		<br />
+		<br />
+		<hr />
 		<div style="width: 700px; float: left; overflow: hidden">
-			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">
-				Летняя школа Академии</h1>
+			<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Летняя школа Академии</h1>
 			<p>
 				Ребята летней робототехнической школы посетили экскурсию на ОАО "Авиадвигатель".
 				На летней школе Академии, ребята не только занимались программированием и проектированием
 				роботов, но и посещали крупные пермские промышленные предприятия, включая ОАО «Авиадвигатель»,
-				ОАО «Пермский Моторный Завод» и др.</p>
+				ОАО «Пермский Моторный Завод» и др.
+			</p>
 			<br />
 		</div>
-		@Html.Partial("AboutMenu")
 		<div class="clear">
 		</div>
-		<div class="photo" style="width: 690px; margin-top: -10px; margin-left: 5px">
+		<div class="photo" style="width: 690px; margin: auto;">
 			@Html.Image("photos/Photo4/mini/first.jpg", "photos/Photo4/big/first.jpg", 0, 140)
 			@Html.Image("photos/Photo4/mini/second.jpg", "photos/Photo4/big/second.jpg", 0, 140)
 			@Html.Image("photos/Photo4/mini/third.jpg", "photos/Photo4/big/third.jpg", 0, 140)
@@ -26,12 +96,12 @@
 		<br />
 		<br />
 		<hr />
-		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">
-			Робофест 2012 в Москве</h1>
+		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Робофест 2012 в Москве</h1>
 		<p>
 			На IV Всероссийском робототехническом фестивале - "РобоФест-2012" наша команда заняла
 			2 место в категории FIRST LEGO League (FLL), обогнав крупные школы робототехники
-			из Москвы, Челябинска, Екатеренбурга и других городов.</p>
+			из Москвы, Челябинска, Екатеренбурга и других городов.
+		</p>
 		<br />
 		<div class="photo" style="width: 685px; margin: auto;">
 			@Html.Image("photos/Photo2/mini/y_33a1199c.jpg", "photos/Photo2/big/y_33a1199c.jpg", 0, 188)
@@ -45,11 +115,11 @@
 		<br />
 		<br />
 		<hr />
-		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">
-			Робофест 2012 в Перми</h1>
+		<h1 style="margin-top: 20px; margin-bottom: 10px; font-size: 32px;">Робофест 2012 в Перми</h1>
 		<p>
 			На первом региональном Робототехническом Фестивале "Робофест" наша команда заняла
-			5 первых мест (из шести ) возможных!!!</p>
+			5 первых мест (из шести ) возможных!!!
+		</p>
 		<div class="photo" style="width: 860px">
 			@Html.Image("photos/Photo/mini/_DSC0616.jpg", "photos/Photo/big/_DSC0616.jpg", 0, 130)
 			@Html.Image("photos/Photo/mini/_DSC0625.jpg", "photos/Photo/big/_DSC0625.jpg", 0, 130)
@@ -68,10 +138,10 @@
 		<br />
 		<br />
 		<hr />
-		<h1>
-			Начало</h1>
+		<h1>Начало</h1>
 		<p>
-			С мая 2011 года начались занятия по курсу «Основы робототехники».</p>
+			С мая 2011 года начались занятия по курсу «Основы робототехники».
+		</p>
 		<div class="photo" style="width: 735px">
 			@Html.Image("photos/Photo3/mini/w_04ed831b.jpg", "photos/Photo3/big/w_04ed831b.jpg", 0, 150)
 			@Html.Image("photos/Photo3/mini/w_32636991.jpg", "photos/Photo3/big/w_32636991.jpg", 0, 150)
@@ -85,6 +155,6 @@
 </div>
 <script>
 	$('.photo').each(function () {
-		$(this).galery();
+		$(this).gallery();
 	});
 </script>

@@ -1,4 +1,5 @@
 $(function () {
+
 	$('.carousel').carousel({
 		interval: 2500
 	})
@@ -8,9 +9,9 @@ $(function () {
 		$('li[data-href=' + name[4] + ']').addClass('active');
 	}
 
-	$('.download-icon').click(function () {
+	$('.download-icon, .intro-caption').click(function () {
 		var name = $(this).attr('data-file');
-		location.href = '/Home/Loadfile/' + name;
+		window.open('/Home/Loadfile/' + name)
 	});
 
 	$('.text a').click(function () {
@@ -31,7 +32,8 @@ $(function () {
 		}, 500);
 	};
 
-	$('.main-nav.group li a[href="' + location.pathname + '"]').parent().addClass('current');
+	var pathname = location.pathname.split('/')[1] ? location.pathname.split('/')[1] : 'main-page'
+	$('.main-nav.group li a[data-href="' + pathname + '"], .main-nav.group li a[data-main=' + pathname + ']').parent().addClass('current');
 
 	$('.modal').click(function () {
 		var elem = $(this);
@@ -40,43 +42,63 @@ $(function () {
 	});
 
 	$('#slider')._TMS({
-	    banners: true,
-	    waitBannerAnimation: false,
-	    preset: 'zabor',
-	    easing: 'easeOutQuad',
-	    pagination: true,
-	    duration: 400,
-	    slideshow: 8000,
-	    bannerShow: function (banner) {
-	        banner.css({ marginRight: -500 }).stop().animate({ marginRight: 0 }, 600)
-	    },
-	    bannerHide: function (banner) {
-	        banner.stop().animate({ marginRight: -500 }, 600)
-	    }
+		banners: true,
+		waitBannerAnimation: false,
+		preset: 'zabor',
+		easing: 'easeOutQuad',
+		pagination: true,
+		duration: 400,
+		slideshow: 8000,
+		bannerShow: function (banner) {
+			banner.css({ marginRight: -500 }).stop().animate({ marginRight: 0 }, 600)
+		},
+		bannerHide: function (banner) {
+			banner.stop().animate({ marginRight: -500 }, 600)
+		}
 	});
 });
 
 (function ($) {
-	$.fn.galery = function (options) {
+	$.fn.gallery = function (options) {
 		var self = this;
 
 		var defaults = {
 			images: self.find('img'),
 			wrapper: 'photo-wrapper',
 			currentPhoto: 0,
-			loadImages: []
+			loadImages: [],
+			cachedImages: []
 		};
 
 		function getBodyScrollTop() {
 			return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
 		};
 
-		function preload() {
-			defaults.loadImages = new Array(defaults.images.length);
-			for (var j = 0; j < defaults.images.length; j++) {
-				defaults.loadImages[j] = new Image;
-				defaults.loadImages[j].src = $(defaults.images[j]).attr('data-src');
+		function preload(idx) {
+			if (!defaults.cachedImages.length) {
+				defaults.cachedImages = new Array(defaults.images.length);
 			}
+			var loadToCache = function (i) {
+				if (i < 0) {
+					i = defaults.cachedImages.length - 1;
+				}
+				if (i === defaults.cachedImages.length) {
+					i = 0;
+				}
+				if (!defaults.cachedImages[i]) {
+					defaults.cachedImages[i] = new Image();
+					defaults.cachedImages[i].src = $(defaults.images[i]).attr('data-src');
+				}
+			}
+			loadToCache(idx - 1);
+			loadToCache(idx);
+			loadToCache(idx + 1);
+			//defaults.loadImages = new Array(defaults.images.length);
+			//for (var j = 0; j < defaults.images.length; j++) {
+			//	defaults.loadImages[j] = new Image;
+			//	defaults.loadImages[j].src = $(defaults.images[j]).attr('data-src');
+			//}
+
 		}
 
 		var opts = $.extend(defaults, options);
@@ -85,7 +107,7 @@ $(function () {
 			if ($('.' + defaults.wrapper).length == 0) {
 				$('body').append('<div class="' + defaults.wrapper + '"></div>');
 			};
-			preload();
+			//preload();
 		};
 
 		init();
@@ -134,12 +156,13 @@ $(function () {
 					.mouseout(function () {
 						prev.find('.image').css('opacity', 0.5);
 					});
-				showPhoto();
+				showPhoto(idx);
 			})
 		});
 
-		var showPhoto = function () {
-			var currentPhoto = $(defaults.loadImages[defaults.currentPhoto]);
+		var showPhoto = function (idx) {
+			preload(idx);
+			var currentPhoto = $(defaults.cachedImages[defaults.currentPhoto]);
 			var container = $('.photo-block');
 			//			$('<img />', {
 			//				'src': currentPhoto.attr('data-src'),
@@ -154,21 +177,29 @@ $(function () {
 		};
 
 		var nextPhoto = function () {
+			if (defaults.images.length === 1) {
+				dispose();
+				return;
+			}
 			defaults.currentPhoto++;
 			if (defaults.currentPhoto == defaults.images.length) {
 				defaults.currentPhoto = 0;
 			}
 			$('.photo-block').empty();
-			showPhoto();
+			showPhoto(defaults.currentPhoto);
 		};
 
 		var prevPhoto = function () {
+			if (defaults.images.length === 1) {
+				dispose();
+				return;
+			}
 			defaults.currentPhoto--;
 			if (defaults.currentPhoto == -1) {
-				defaults.currentPhoto = defaults.loadImages.length - 1;
+				defaults.currentPhoto = defaults.cachedImages.length - 1;
 			}
 			$('.photo-block').empty();
-			showPhoto();
+			showPhoto(defaults.currentPhoto);
 		};
 
 		var dispose = function () {

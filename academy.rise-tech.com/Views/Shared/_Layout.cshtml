@@ -3,10 +3,10 @@
 <head>
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/style.css")?v8" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/layout.css")?v8" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/layout.css")?v9" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/bootstrap.css")?v8" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/script.js")?v9" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/script.js")?v10" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/libs.js")?v8" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/tms-0.3.js")?v2"></script>
@@ -21,11 +21,12 @@
                 <div class="inside">
                     <ul class="main-nav group">
                         <li class="logotyp"><a href="@Url.Action("Index", "Home")">Академия <span>робототехники и</span><span>программирования</span></a></li>
-                        <li class="main"><a href="@Url.Action("Index", "Home")">Главная <span>страница</span></a></li>
-                        <li class="curs"><a href="@Url.Action("Elementary", "Courses")">Информация <span>по курсам</span></a></li>
-                        <li class="news"><a href="@Url.Action("Introduction", "Home")">Введение<span>в Робототехнику</span></a></li>
-                        <li class="useful"><a href="@Url.Action("Filial", "Partners")">Партнерские <span>программы</span></a></li>
-                        <li class="rules"><a href="@Url.Action("Team", "About")">Об академии <span>подробнее</span></a></li>
+                        <li class="main"><a data-href="Home" data-main="main-page" href="@Url.Action("Index", "Home")">Главная <span>страница</span></a></li>
+                        <li class="curs"><a data-href="Courses" href="@Url.Action("Elementary", "Courses")">Информация <span>о курсах</span></a></li>
+                        @*<li class="news"><a href="@Url.Action("Introduction", "Home")">Введение<span>в Робототехнику</span></a></li>*@
+						<li class="news"><a data-href="Development" href="@Url.Action("Index", "Development")">Разработка <span>роботов</span></a></li>
+                        <li class="useful"><a data-href="Partners" href="@Url.Action("Filial", "Partners")">Партнерские <span>программы</span></a></li>
+                        <li class="rules"><a data-href="About" href="@Url.Action("Team", "About")">Об академии <span>подробнее</span></a></li>						
                         <div id="phone">
                             <li class="phone"><a>8-965-552-16-29 <span>Телефон</span></a></li>
                         </div>
@@ -55,7 +56,7 @@
             </section>
             <div class="copyright">
                 <p>
-                    <span>г.Пермь, ул. Луначарского 42, 2 этаж,</span><!--</p>
+                    <span>г.Пермь, ул. Чернышевского 28, ауд. 322, 323,</span><!--</p>
 				<p>-->&nbsp; <span>mvmerzlyakov@gmail.com,</span>
                     <!--</p>
 				<p>-->
@@ -66,25 +67,6 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-        var reformalOptions = {
-            project_id: 65578,
-            project_host: "roboticsacademy.reformal.ru",
-            tab_orientation: "left",
-            tab_indent: "50%",
-            tab_bg_color: "#333333",
-            tab_border_color: "#FFFFFF",
-            tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/2a94cfe6511106e7a48d0af3904e3090/left/1/tab.png",
-            tab_border_width: 2
-        };
-
-        (function () {
-            var script = document.createElement('script');
-            script.type = 'text/javascript'; script.async = true;
-            script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
-            document.getElementsByTagName('head')[0].appendChild(script);
-        })();
-    </script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -98,10 +80,5 @@
         })();
 
     </script>
-    <noscript>
-        <a href="http://reformal.ru">
-            <img src="http://media.reformal.ru/reformal.png" /></a><a href="http://roboticsacademy.reformal.ru">Oтзывы
-				и предложения для Robotics Academy</a>
-    </noscript>
 </body>
 </html>
